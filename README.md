@@ -1,4 +1,4 @@
-# Setup Guid
+# Setup Guide
 
 ### 1. Setting up Postgresql from docker container
 * Install psql
@@ -8,7 +8,7 @@
 * Download docker container:
 
     ```
-   docker pull postres
+   docker pull postgres
     ```
   
 * Run the container with basic username and password:

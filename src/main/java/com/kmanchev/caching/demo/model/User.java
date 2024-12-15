@@ -2,8 +2,10 @@ package com.kmanchev.caching.demo.model;
 
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 @Entity
+@Data
 @Table(name = "users")
 public class User {
 
@@ -25,6 +27,4 @@ public class User {
         this.lastname = lastname;
         this.email = email;
     }
-
-    // Getters and setters
 }
