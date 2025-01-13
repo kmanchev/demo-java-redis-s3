@@ -1,0 +1,14 @@
+### Fetch the CSRF token
+GET http://localhost:8080/login
+
+> {% client.global.set("csrfToken", response.body.match('<input name="_csrf" type="hidden" value="(.*?)"')[1]); %}
+
+
+### Perform login with the CSRF token
+POST http://localhost:8080/login
+Content-Type: application/x-www-form-urlencoded
+
+username=user&password=1760e12e-616a-4497-8e7f-8d475eb46ed&_csrf={{csrfToken}}
+
+### Perform initial request
+GET http://localhost:8080/initial
